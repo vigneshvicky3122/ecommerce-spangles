@@ -311,12 +311,12 @@ const ProductController = {
       instance.orders.create(options, (error, order) => {
         if (error) {
           console.log(error);
-          return res.status(404).json({ message: "Something Went Wrong!" });
+          return res.json({ status: 404, message: "Something Went Wrong!" });
         }
-        res.status(200).json({ data: order });
+        res.json({ status: 200, data: order });
       });
     } catch (error) {
-      res.status(500).json({ message: "Internal Server Error!" });
+      res.json({ status: 500, message: "Internal Server Error!" });
       console.log(error);
     }
   },
@@ -347,20 +347,25 @@ const ProductController = {
         const OrderProducts = await OrderModal.findById({
           _id: req.params.id,
         });
-        let removeFromCart;
-        for (let index = 0; index < OrderProducts.products.length; index++) {
-          const element = OrderProducts.products[index]._id;
-          removeFromCart = await cartModal.findByIdAndDelete({ _id: element });
-        }
 
-        if (removeFromCart) {
-          return res.status(200).json({ message: "Payment successful" });
+        if (OrderProducts.products.length > 0) {
+          for (let index = 0; index < OrderProducts.products.length; index++) {
+            const element = OrderProducts.products[index];
+            if (element._id) {
+              await cartModal.findByIdAndDelete({ _id: element._id });
+            } else {
+              break;
+            }
+          }
+          return res.json({ status: 200, message: "Payment successful" });
+        } else {
+          return res.json({ status: 200, message: "Payment successful" });
         }
       } else {
-        return res.status(404).json({ message: "Invalid signature sent!" });
+        return res.json({ status: 404, message: "Invalid signature sent!" });
       }
     } catch (error) {
-      res.status(500).json({ message: "Internal Server Error!" });
+      res.json({ status: 500, message: "Internal Server Error!" });
       console.log(error);
     }
   },
