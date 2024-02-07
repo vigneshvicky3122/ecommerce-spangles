@@ -125,7 +125,7 @@ function Product() {
                       className="bg-slate-100 p-1 rounded-full hover:cursor-pointer"
                     >
                       <svg
-                        class="w-5 h-5 text-gray-600 dark:text-white"
+                        className="w-5 h-5 text-gray-600 dark:text-white"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -133,9 +133,9 @@ function Product() {
                       >
                         <path
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M12 6C6.5 1 1 8 5.8 13l6.2 7 6.2-7C23 8 17.5 1 12 6Z"
                         />
                       </svg>
@@ -146,7 +146,7 @@ function Product() {
                       className="bg-slate-100 p-1 rounded-full hover:cursor-pointer"
                     >
                       <svg
-                        class="w-5 h-5 text-red-600 dark:text-white"
+                        className="w-5 h-5 text-red-600 dark:text-white"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
@@ -184,7 +184,7 @@ function Product() {
                   <div className="inline-flex items-center gap-3">
                     <div className="inline-flex items-center">
                       <svg
-                        class="w-4 h-4 text-yellow-400 dark:text-white"
+                        className="w-4 h-4 text-yellow-400 dark:text-white"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
@@ -193,7 +193,7 @@ function Product() {
                         <path d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
                       </svg>
                       <svg
-                        class="w-4 h-4 text-yellow-400 dark:text-white"
+                        className="w-4 h-4 text-yellow-400 dark:text-white"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
@@ -202,7 +202,7 @@ function Product() {
                         <path d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
                       </svg>
                       <svg
-                        class="w-4 h-4 text-yellow-400 dark:text-white"
+                        className="w-4 h-4 text-yellow-400 dark:text-white"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
@@ -211,7 +211,7 @@ function Product() {
                         <path d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
                       </svg>
                       <svg
-                        class="w-4 h-4 text-yellow-400 dark:text-white"
+                        className="w-4 h-4 text-yellow-400 dark:text-white"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
@@ -220,7 +220,7 @@ function Product() {
                         <path d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
                       </svg>
                       <svg
-                        class="w-4 h-4 text-yellow-400 dark:text-white"
+                        className="w-4 h-4 text-yellow-400 dark:text-white"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
@@ -238,7 +238,7 @@ function Product() {
                   </div>
                   <div className="inline-flex items-center gap-2">
                     <svg
-                      class="w-6 h-6 text-red-600 dark:text-white"
+                      className="w-6 h-6 text-red-600 dark:text-white"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
@@ -256,8 +256,8 @@ function Product() {
                     {[1, 2, 3, 4].map((c, i) => (
                       <div key={i}>
                         <label
-                          for={`Color${i + 1}`}
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          htmlFor={`Color${i + 1}`}
+                          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
                           Color {i + 1}
                           <span className="text-red-600">*</span>
@@ -265,8 +265,9 @@ function Product() {
                         <select
                           id={`Color${i + 1}`}
                           name={`Color${i + 1}`}
+                          defaultValue={CartData[`Color${i + 1}`]}
                           onChange={handleChange}
-                          class="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          className="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         >
                           <option>Choose a Color</option>
                           {product.colors.map((color, id) => (
@@ -282,8 +283,8 @@ function Product() {
                     {[1, 2, 3, 4].map((s, i) => (
                       <div key={i}>
                         <label
-                          for={`Size${i + 1}`}
-                          class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                          htmlFor={`Size${i + 1}`}
+                          className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                         >
                           Size {i + 1}
                           <span className="text-red-600">*</span>
@@ -291,8 +292,9 @@ function Product() {
                         <select
                           id={`Size${i + 1}`}
                           name={`Size${i + 1}`}
+                          defaultValue={CartData[`Size${i + 1}`]}
                           onChange={handleChange}
-                          class="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          className="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         >
                           <option>Choose a Size</option>
                           {product.size.map((size, id) => (
@@ -308,8 +310,8 @@ function Product() {
                 <div className="w-full flex flex-row justify-between items-center">
                   <div className="flex flex-col w-[25%]">
                     <label
-                      for="Qty"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      htmlFor="Qty"
+                      className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                     >
                       QTY:
                     </label>
@@ -317,9 +319,9 @@ function Product() {
                       id="Qty"
                       name="Qty"
                       onChange={handleChange}
-                      defaultValue={1}
+                      defaultValue={CartData[`Qty`]}
                       required
-                      class="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      className="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     >
                       <option>Choose a QTY</option>
                       {[1, 2, 3, 4, 5].map((qty, id) => (
@@ -338,7 +340,7 @@ function Product() {
                     id="offer"
                     name="offer"
                     defaultValue={""}
-                    class="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="bg-gray-50 w-full border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   >
                     <option>OFFERS FOR YOU</option>
                   </select>
@@ -347,19 +349,19 @@ function Product() {
                   <button
                     type="button"
                     onClick={() => addToCart(product._id)}
-                    class="text-white w-2/4 bg-[#1da1f2] hover:bg-[#1da1f2]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex justify-center items-center dark:focus:ring-[#1da1f2]/55 me-2 mb-2"
+                    className="text-white w-2/4 bg-[#1da1f2] hover:bg-[#1da1f2]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex justify-center items-center dark:focus:ring-[#1da1f2]/55 me-2 mb-2"
                   >
                     <svg
-                      class="w-4 h-4 me-1"
+                      className="w-4 h-4 me-1"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path
-                        fill-rule="evenodd"
+                        fillRule="evenodd"
                         d="M4 4c0-.6.4-1 1-1h1.5c.5 0 .9.3 1 .8L7.9 6H19a1 1 0 0 1 1 1.2l-1.3 6a1 1 0 0 1-1 .8h-8l.2 1H17a3 3 0 1 1-2.8 2h-2.4a3 3 0 1 1-4-1.8L5.7 5H5a1 1 0 0 1-1-1Z"
-                        clip-rule="evenodd"
+                        clipRule="evenodd"
                       />
                     </svg>
                     ADD TO CART
@@ -367,10 +369,10 @@ function Product() {
                   <button
                     type="button"
                     onClick={() => handleSubmit(product._id)}
-                    class="text-gray-800 w-2/4 bg-yellow-300 hover:bg-yellow-200 focus:ring-4 focus:outline-none focus:ring-yellow-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex justify-center items-center me-2 mb-2"
+                    className="text-gray-800 w-2/4 bg-yellow-300 hover:bg-yellow-200 focus:ring-4 focus:outline-none focus:ring-yellow-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex justify-center items-center me-2 mb-2"
                   >
                     <svg
-                      class="w-4 h-4 me-1 text-gray-800"
+                      className="w-4 h-4 me-1 text-gray-800"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -378,9 +380,9 @@ function Product() {
                     >
                       <path
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
                         d="M19 12H5m14 0-4 4m4-4-4-4"
                       />
                     </svg>
