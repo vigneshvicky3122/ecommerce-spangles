@@ -84,7 +84,7 @@ function Payment() {
               response,
             }
           );
-          if (request.status === 200) {
+          if (request.data.status === 200) {
             navigate("/cart");
           }
         } catch (error) {
@@ -127,8 +127,8 @@ function Payment() {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   strokeWidth="2"
                   d="M1 5.917 5.724 10.5 15 1.5"
                 />
@@ -146,8 +146,8 @@ function Payment() {
               >
                 <path
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   strokeWidth="2"
                   d="M1 5.917 5.724 10.5 15 1.5"
                 />
@@ -215,7 +215,7 @@ function Payment() {
               </p>
             </div>
             <p className="text-gray-600 text-sm">
-              {`${ShippingDetails.address} ${ShippingDetails["town/village"]} ${ShippingDetails["city/district"]} ${ShippingDetails.state} ${ShippingDetails.pincode}`}
+              {`${ShippingDetails.address}, ${ShippingDetails["town/village"]}, ${ShippingDetails["city/district"]}, ${ShippingDetails.state}, ${ShippingDetails.pincode}.`}
             </p>
             <p className="text-gray-600 text-sm">
               Contact Number:{" "}

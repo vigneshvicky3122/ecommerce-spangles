@@ -6,6 +6,10 @@ import { useNavigate } from "react-router-dom";
 function Product() {
   const navigate = useNavigate();
   const [ProductData, setProductData] = useState([]);
+  const [ShippingCharge, setShippingCharge] = useState({
+    CurrentCharges: 0,
+    discountCharges: 40,
+  });
   const [CartData, setCartData] = useState({
     Color1: "Burgundy",
     Color2: "Black",
@@ -33,8 +37,34 @@ function Product() {
   const handleChange = (e) => {
     setCartData({ ...CartData, [e.target.name]: e.target.value });
   };
-  async function handleSubmit(id) {}
-
+  async function handleSubmit() {
+    const oderData = {
+      products: {
+        name: ProductData[0].name,
+        image: ProductData[0].images[0],
+        category: ProductData[0].category,
+        price: ProductData[0].price,
+        CartData: CartData,
+      },
+      coupon: {
+        status: false,
+        couponCode: "",
+        discount_price: 0,
+      },
+      shippingCharge: ShippingCharge,
+    };
+    try {
+      const response = await axios.post(`${URL}/product/order/new`, oderData);
+      if (response.data.status === 201) {
+        navigate(`/order/${response.data.orderId}/address`);
+      }
+      if (response.data.status === 400) {
+        console.log(response.data.message);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
   async function addToCart(id) {
     const Data = {
       name: ProductData[0].name,

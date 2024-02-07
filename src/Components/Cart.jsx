@@ -149,9 +149,9 @@ function Cart() {
                   >
                     <path
                       stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                       d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.3L19 7H7.3"
                     />
                   </svg>
@@ -367,9 +367,9 @@ function Cart() {
                       >
                         <path
                           stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"
                         />
                       </svg>
@@ -472,12 +472,17 @@ function Cart() {
         </div>
       ) : (
         <div className="w-screen h-screen flex flex-col items-center justify-center bg-slate-50">
-          <a
-            href="/product"
-            className="bg-yellow-400 rounded font-semibold text-gray-800 p-2.5 hover:bg-yellow-600 focus:ring-4 focus:ring-yellow-300"
-          >
-            Continue Shopping
-          </a>
+          <div className="flex flex-col items-center space-y-2">
+            <h4 className="font-semibold text-base text-red-500">
+              Cart value is Empty!
+            </h4>
+            <a
+              href="/product"
+              className="bg-yellow-400 rounded font-semibold text-gray-800 p-2.5 hover:bg-yellow-600 focus:ring-4 focus:ring-yellow-300"
+            >
+              Continue Shopping
+            </a>
+          </div>
         </div>
       )}
     </React.Fragment>
