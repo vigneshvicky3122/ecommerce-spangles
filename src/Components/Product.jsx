@@ -125,23 +125,36 @@ function Product() {
           ProductData.map((product, index) => (
             <div
               key={index}
-              className="container flex flex-row justify-around items-start gap-10"
+              className="container flex flex-row justify-around items-start gap-10 max-lg:flex-col max-lg:items-center"
             >
-              <div className="w-[50%] flex flex-row items-start gap-5">
-                <div className="w-1/4 flex flex-col items-center gap-5 h-screen overflow-y-scroll">
+              <div className="w-[50%] flex flex-row items-start gap-5 max-lg:container max-lg:flex-col max-lg:justify-center  max-lg:mx-auto">
+                <div className="w-1/4 flex flex-col items-center gap-5 h-screen overflow-scroll max-lg:flex-row max-lg:w-full max-lg:justify-between max-lg:h-40 ">
                   {product.images.map((image, idx) => (
-                    <img key={idx} src={image} alt="" />
+                    <img
+                      key={idx}
+                      src={image}
+                      height={100}
+                      width={100}
+                      alt=""
+                    />
                   ))}
                 </div>
-                <div className="w-full h-screen">
+                <div className="w-full h-screen max-lg:-order-last">
                   <Carousel indicators={false} slide={false}>
                     {product.images.map((image, idx) => (
-                      <img key={idx} src={image} alt="" className="" />
+                      <img
+                        key={idx}
+                        src={image}
+                        alt=""
+                        width={100}
+                        height={100}
+                        className=""
+                      />
                     ))}
                   </Carousel>
                 </div>
               </div>
-              <div className="w-[50%] flex flex-col space-y-4">
+              <div className="w-[50%] flex flex-col space-y-4 max-lg:container max-lg:mx-auto max-lg:justify-center max-lg:px-8">
                 <div className="w-full flex flex-row justify-between items-start my-5">
                   <div className="flex flex-col">
                     <h1 className="font-bold text-lg">{product.name}</h1>
@@ -211,7 +224,7 @@ function Product() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2">
-                  <div className="inline-flex items-center gap-3">
+                  <div className="inline-flex items-center gap-3 max-sm:flex max-sm:flex-col max-sm:items-start">
                     <div className="inline-flex items-center">
                       <svg
                         className="w-4 h-4 text-yellow-400 dark:text-white"
@@ -276,13 +289,13 @@ function Product() {
                     >
                       <path d="M18 3h-5.7a2 2 0 0 0-1.4.6L3.6 11a2 2 0 0 0 0 2.8l6.6 6.6a2 2 0 0 0 2.8 0l7.4-7.5a2 2 0 0 0 .6-1.4V6a3 3 0 0 0-3-3Zm-2.4 6.4a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
                     </svg>
-                    <span className="font-bold">
+                    <span className="font-bold max-sm:text-sm max-sm:font-semibold">
                       Extra &#8377;100 OFF on &#8377;999 (Code:BEYOUNG100)
                     </span>
                   </div>
                 </div>
                 <div className="w-full flex flex-row gap-5">
-                  <div className="flex flex-col space-y-2 w-[35%]">
+                  <div className="flex flex-col space-y-2 w-[35%] max-sm:w-auto">
                     {[1, 2, 3, 4].map((c, i) => (
                       <div key={i}>
                         <label
@@ -338,7 +351,7 @@ function Product() {
                   </div>
                 </div>
                 <div className="w-full flex flex-row justify-between items-center">
-                  <div className="flex flex-col w-[25%]">
+                  <div className="flex flex-col w-[25%] max-lg:w-auto max-lg:flex-wrap">
                     <label
                       htmlFor="Qty"
                       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -375,11 +388,11 @@ function Product() {
                     <option>OFFERS FOR YOU</option>
                   </select>
                 </div>
-                <div className="inline-flex items-center gap-3">
+                <div className="inline-flex items-center gap-3 max-lg:flex max-sm:flex-col max-sm:justify-center">
                   <button
                     type="button"
                     onClick={() => addToCart(product._id)}
-                    className="text-white w-2/4 bg-[#1da1f2] hover:bg-[#1da1f2]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex justify-center items-center dark:focus:ring-[#1da1f2]/55 me-2 mb-2"
+                    className="text-white w-2/4 max-sm:w-full bg-[#1da1f2] hover:bg-[#1da1f2]/90 focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex justify-center items-center dark:focus:ring-[#1da1f2]/55 me-2 mb-2"
                   >
                     <svg
                       className="w-4 h-4 me-1"
@@ -399,7 +412,7 @@ function Product() {
                   <button
                     type="button"
                     onClick={() => handleSubmit(product._id)}
-                    className="text-gray-800 w-2/4 bg-yellow-300 hover:bg-yellow-200 focus:ring-4 focus:outline-none focus:ring-yellow-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex justify-center items-center me-2 mb-2"
+                    className="text-gray-800 w-2/4 max-sm:w-full bg-yellow-300 hover:bg-yellow-200 focus:ring-4 focus:outline-none focus:ring-yellow-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex justify-center items-center me-2 mb-2"
                   >
                     <svg
                       className="w-4 h-4 me-1 text-gray-800"
