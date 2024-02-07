@@ -1,9 +1,10 @@
 const { Schema, model } = require("mongoose");
 const OrderSchema = new Schema({
   products: Array,
-  discounts: String,
+  coupon: Object,
+  discounts: Number,
   subtotal: Number,
-  shippingCharge: Number,
+  shippingCharge: Object,
   shippingDetails: Object,
   paymentDetails: Object,
 });
